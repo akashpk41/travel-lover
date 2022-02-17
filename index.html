@@ -1,89 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>World Tour 2022</title>
-   <!-- bootstrap css -->
-   <link rel="stylesheet" href="css/bootstrap.min.css">
-   <!-- custom css -->
-   <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
- <header><h1 class="text-center mb-5 traveler display-3 fw-bold " > Travel Lover </h1></header>
- <main>
-    <section class="container my-3 d-flex justify-content-center align-items-center ">
-       <div class="row gy-3 ">
-          <div class="col-12 col-md-6 d-flex justify-content-center align-items-center ">
-             <img class="img-fluid rounded-2 " src="img/travel.png" alt="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>World Tour 2022</title>
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1 class="text-center mb-5 traveler display-3 fw-bold">Travel Lover</h1>
+    </header>
+    <main>
+      <section
+        class="container my-3 d-flex justify-content-center align-items-center"
+      >
+        <div class="row gy-3">
+          <div
+            class="col-12 col-md-6 d-flex justify-content-center align-items-center"
+          >
+            <img class="img-fluid rounded-2" src="img/travel.png" alt="" />
           </div>
-          <div id="income-save" class="col-12 col-md-6 p-3 text-center">
-             <!-- income and total expenses part start -->
-             <div class="income-container">
-               <div class="income">
-                  <h5 class="mb-4 fw-bold" >Income</h5>
-                  <div class="d-flex align-items-center justify-content-center " >
-                     <label class="fw-bold me-3 " for="">Income:</label>
-                     <input id="income-field" id="income-amount" class=" w-75 "  type="text">
-                  </div>
-               </div>
+          <div
+            id="income-saving-section"
+            class="col-12 col-md-6 p-3 text-center"
+          >
+            <!-- income and total expenses part calculation start -->
+            <div class="income-container">
+              <div class="income">
+                <h5 class="mb-4 fw-bold">Income</h5>
+                <div class="d-flex align-items-center justify-content-center">
+                  <label class="fw-bold me-3" for="">Income:</label>
+                  <input
+                    id="income-field"
+                    id="income-amount"
+                    class="w-75"
+                    type="text"
+                  />
+                </div>
+              </div>
 
-               <!-- total expenses part   -->
-               <div class="expenses my-4 ">
-                  <h5 class="mb-4 fw-bold " >Expenses</h5>
-                  
-                  <div class="d-flex my-3 align-items-center justify-content-center" >
-                     <label class="fw-bold me-3 " for="">Food:</label>
-                     <input id="food-field" class="w-75 "    type="text">
-                  </div>
+              <!-- total expenses part calculation   -->
+              <div class="expenses my-4">
+                <h5 class="mb-4 fw-bold">Expenses</h5>
 
-                  <div class="d-flex  my-3 align-items-center justify-content-center" >
-                     <label class="fw-bold me-3 " for="">Rent:</label>
-                     <input id="rent-field" class="w-75 "  type="text">
-                  </div>
+                <div
+                  class="d-flex my-3 align-items-center justify-content-center"
+                >
+                  <label class="fw-bold me-3" for="">Food:</label>
+                  <input id="food-field" class="w-75" type="text" />
+                </div>
 
-                  <div class="d-flex  align-items-center justify-content-center" >
-                     <label class="fw-bold me-2  " for="">Clothes:</label>
-                     <input id="clothes-field" class="w-75 "   type="text">
-                  </div>
+                <div
+                  class="d-flex my-3 align-items-center justify-content-center"
+                >
+                  <label class="fw-bold me-3" for="">Rent:</label>
+                  <input id="rent-field" class="w-75" type="text" />
+                </div>
 
-               </div>
-               <button id="calculate-btn" class="btn btn-primary px-5 fw-bold ">Calculate</button>
+                <div class="d-flex align-items-center justify-content-center">
+                  <label class="fw-bold me-2" for="">Clothes:</label>
+                  <input id="clothes-field" class="w-75" type="text" />
+                </div>
+              </div>
+              <button id="calculate-btn" class="btn btn-primary px-5 fw-bold">
+                Calculate
+              </button>
 
-               <!-- total balance -->
-               <div class="my-4" >
-                  <h5 class="mb-4 fw-bold" >Total Expenses: <span id="total-expenses"></span> </h5>
-                  <h5 class="mb-4 fw-bold" >Balance: <span id="balance"></span> </h5>
-
-               </div>
-             </div>
-             <!-- income and total expenses part end -->
-             <!-- saving and remaining part start -->
-             <div class="my-4">
-             <div class="d-flex justify-content-around align-items-center " >
-              <div> <label class="fw-bold me-3 " for="">Save:</label>
-               <input id="save-field" value="20" type="text"> 
-               <span class="fw-bold m-1" >%</span>
+              <!-- total balance calculation -->
+              <div class="my-4">
+                <h5 class="mb-4 fw-bold">
+                  Total Expenses: <span id="total-expenses"></span>
+                </h5>
+                <h5 class="mb-4 fw-bold">
+                  Balance: <span id="balance"></span>
+                </h5>
+              </div>
             </div>
+            <!-- income and total expenses part calculation end -->
+            <!-- saving and remaining part  start -->
+            <div class="my-4">
+              <div class="d-flex justify-content-around align-items-center">
+                <div>
+                  <label class="fw-bold me-3" for="">Save:</label>
+                  <input id="save-field" value="20" type="text" />
+                  <span class="fw-bold m-1">%</span>
+                </div>
 
-               <button id="save-btn" class="btn px-5 fw-bold  ">Save</button>
+                <button id="save-btn" class="btn px-5 fw-bold">Save</button>
+              </div>
+
+              <!-- total balance calculation -->
+              <div class="my-4">
+                <h5 class="mb-4 fw-bold">
+                  Saving Amount: <span id="saving-amount"></span>
+                </h5>
+                <h5 class="mb-4 fw-bold">
+                  Remaining Balance: <span id="remaining-balance"></span>
+                </h5>
+              </div>
             </div>
-
-            <!-- total balance -->
-            <div class="my-4" >
-               <h5 class="mb-4 fw-bold" >Saving Amount: <span id="saving-amount"></span>  </h5>
-               <h5 class="mb-4 fw-bold" >Remaining Balance: <span id="remaining-balance"></span> </h5>
-
-            </div>
-         </div>
-             <!-- saving and remaining part end -->
+            <!-- saving and remaining part calculation end -->
           </div>
-       </div>
-    </section>
- </main>
+        </div>
+      </section>
+    </main>
 
-   <!-- javascript link -->
-   <script src="js/app.js"></script>
-</body>
+    <!-- javascript link -->
+    <script src="js/app.js"></script>
+  </body>
 </html>

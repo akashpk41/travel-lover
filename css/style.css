@@ -34,5 +34,9 @@ input:focus {
 #save-field{
   width: 60px;
   padding: 10px;
-  text-align: center;
+  text-align: center;  
+}
+#save-btn{
+  background: #2d4469;
+  color: white;
 }

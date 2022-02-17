@@ -2,7 +2,7 @@
 // function for getting input field and get input field number.
 function getInputValue(inputId){
    const inputField = document.getElementById( inputId + '-field');
-   const inputValue = parseInt(inputField.value);
+   const inputValue = parseFloat(inputField.value);
   
    return inputValue
 }
@@ -10,7 +10,7 @@ function getInputValue(inputId){
 // get income input field for calculation.
 function getIncomeAmount(){
    const incomeBalanceText = document.getElementById('income-field');
-   const incomeBalance = parseInt(incomeBalanceText.value);
+   const incomeBalance = parseFloat(incomeBalanceText.value);
    return incomeBalance
 }
 
@@ -55,10 +55,26 @@ saveBtn.addEventListener('click',function(){
    // debugger;
    const myBalance = getIncomeAmount();
   const saveSomeMoneyText = document.getElementById('save-field');
-  const saveSomeMoney = parseInt(saveSomeMoneyText.value)
-  const savingAmount = myBalance % saveSomeMoney    ;
+  const saveSomeMoney = parseFloat(saveSomeMoneyText.value)
+  const savingAmount = (( myBalance * saveSomeMoney ) / 100 );
+// debugger;
+  const balanceText = document.getElementById('balance');
+  const balanceTotal = parseFloat(balanceText.innerText);
+  const remainingBalance = balanceTotal - savingAmount
 
-  console.log(savingAmount);
+    console.log(savingAmount);
+    console.log(remainingBalance);
+   //  debugger;
+   // update on html
+   if( savingAmount > balanceTotal ){
+      alert(" you don't have sufficient Amount  ");
+
+   } else if( savingAmount > 0 && savingAmount < balanceTotal  ) {
+      document.getElementById('saving-amount').innerText = savingAmount
+   document.getElementById('remaining-balance').innerText = remainingBalance
+   }
+   
+   
 
 
 

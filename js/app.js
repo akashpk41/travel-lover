@@ -2,7 +2,8 @@
 // function for getting input field and get input field number.
 function getInputValue(inputId){
    const inputField = document.getElementById( inputId + '-field');
-   const inputValue = parseInt(inputField.value); 
+   const inputValue = parseInt(inputField.value);
+  
    return inputValue
 }
 
@@ -31,14 +32,20 @@ calculateBtn.addEventListener('click',function(){
    // validation 1. if input field value is negative. 
    if( myIncome < 0 || foodCost < 0 || rentCost < 0 || clothesCost <0 ){
       alert('sorry! nagative number are not allowed ')
-   } 
-      // validation 2. if my expenses amount greater than my money
-  else if(totalExpenses < myBalance){
-     //   totalExpense update on html 
-      document.getElementById('total-expenses').innerText = totalExpenses
-      document.getElementById('balance').innerText = balance
+   }
+   // validation 2. if user put any string in input field.
+   else if( isNaN(myIncome) || isNaN(foodCost) || isNaN(rentCost) || isNaN(clothesCost) ){
+     alert('please put only number ')
+   }
+  
+      // validation 3. if my expenses amount greater than my money
+  else if(totalExpenses > myBalance){
+   alert("Sorry! you don't have enough balance. ")
    } else{
-      alert("Sorry! you don't have enough balance. ")
+      
+       //   totalExpense update on html 
+       document.getElementById('total-expenses').innerText = totalExpenses
+       document.getElementById('balance').innerText = balance
    }
 });
 

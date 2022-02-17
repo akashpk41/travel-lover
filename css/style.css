@@ -30,3 +30,9 @@ input {
 input:focus {
   background: #7979796b;
 }
+
+#save-field{
+  width: 60px;
+  padding: 10px;
+  text-align: center;
+}

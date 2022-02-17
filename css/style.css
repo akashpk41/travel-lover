@@ -1,0 +1,32 @@
+/* common classes */
+
+#calculate-btn {
+  background: #2d4469;
+}
+
+/* main part styele */
+
+.traveler {
+  color: #0c2252;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#income-save{
+background: rgb(248 248 248);
+box-sizing: 1px 1px 5px;
+border-radius: 7px;
+}
+
+input {
+  background: rgb(220 220 220);
+  padding: 10px 20px;
+  outline: none;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+input:focus {
+  background: #7979796b;
+}

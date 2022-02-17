@@ -11,47 +11,73 @@
    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
- <header><h1 class="text-center my-5 " > Travel Lover </h1></header>
+ <header><h1 class="text-center mb-5 traveler display-3 fw-bold " > Travel Lover </h1></header>
  <main>
-    <section class="container">
+    <section class="container my-3 d-flex justify-content-center align-items-center ">
        <div class="row gy-3 ">
-          <div class="col-12 col-md-6">
-             <img class="img-fluid" src="img/travel.png" alt="">
+          <div class="col-12 col-md-6 d-flex justify-content-center align-items-center ">
+             <img class="img-fluid rounded-2 " src="img/travel.png" alt="">
           </div>
-          <div class="col-12 col-md-6 text-center">
+          <div id="income-save" class="col-12 col-md-6 p-3 text-center">
              <!-- income and total expenses part start -->
              <div class="income-container">
                <div class="income">
-                  <h4 class="mb-3 fw-bold" >Income</h4>
-                  <div class="d-flex" >
+                  <h5 class="mb-4 fw-bold" >Income</h5>
+                  <div class="d-flex align-items-center justify-content-center " >
                      <label class="fw-bold me-3 " for="">Income:</label>
-                     <input class="form-control w-75 " type="text">
+                     <input id="income-amount" class=" w-75 " value="10000" type="text">
                   </div>
                </div>
 
                <!-- total expenses part   -->
                <div class="expenses my-4 ">
-                  <h4 class="mb-3 fw-bold " >Expenses</h4>
+                  <h5 class="mb-4 fw-bold " >Expenses</h5>
                   
-                  <div class="d-flex my-3 " >
+                  <div class="d-flex my-3 align-items-center justify-content-center" >
                      <label class="fw-bold me-3 " for="">Food:</label>
-                     <input class="form-control w-75 " type="text">
+                     <input class="w-75 "   value="3000" type="text">
                   </div>
 
-                  <div class="d-flex  my-3 " >
+                  <div class="d-flex  my-3 align-items-center justify-content-center" >
                      <label class="fw-bold me-3 " for="">Rent:</label>
-                     <input class="form-control w-75 " type="text">
+                     <input class="w-75 "  value="2000" type="text">
                   </div>
 
-                  <div class="d-flex" >
-                     <label class="fw-bold me-3 " for="">Clothes:</label>
-                     <input class="form-control w-75 " type="text">
+                  <div class="d-flex  align-items-center justify-content-center" >
+                     <label class="fw-bold me-2  " for="">Clothes:</label>
+                     <input class="w-75 "  value="500" type="text">
                   </div>
 
                </div>
-               <button class="btn btn-primary btn-lg px-4 fw-bold ">Calculate</button>
+               <button id="calculate-btn" class="btn btn-primary px-5 fw-bold ">Calculate</button>
+
+               <!-- total balance -->
+               <div class="my-4" >
+                  <h5 class="mb-4 fw-bold" >Total Expenses: 5500 </h5>
+                  <h5 class="mb-4 fw-bold" >Balance: 4500 </h5>
+
+               </div>
              </div>
              <!-- income and total expenses part end -->
+             <!-- saving and remaining part start -->
+             <div class="my-4">
+             <div class="d-flex justify-content-around align-items-center " >
+              <div> <label class="fw-bold me-3 " for="">Save:</label>
+               <input class="w-25 " value="20" type="text"> 
+               <span class="fw-bold ms-2" >%</span>
+            </div>
+
+               <button id="calculate-btn" class="btn btn-primary px-5 fw-bold  ">Save</button>
+            </div>
+
+            <!-- total balance -->
+            <div class="my-4" >
+               <h5 class="mb-4 fw-bold" >Saving Amount: 2000  </h5>
+               <h5 class="mb-4 fw-bold" >Remaining Balance: 2500 </h5>
+
+            </div>
+         </div>
+             <!-- saving and remaining part end -->
           </div>
        </div>
     </section>
